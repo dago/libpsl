@@ -14,10 +14,10 @@ if WITH_LIBICU
   libpsl_la_LDFLAGS += $(LIBICU_LIBS)
 endif
 if WITH_LIBIDN2
-  libpsl_la_LDFLAGS += -lidn2 -lunistring
+  libpsl_la_LDFLAGS += $(LIBIDN2_LIBS)
 endif
 if WITH_LIBIDN
-  libpsl_la_LDFLAGS += -lidn -lunistring
+  libpsl_la_LDFLAGS += $(LIBIDN_LIBS)
 endif
 
 noinst_PROGRAMS = psl2c
